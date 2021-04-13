@@ -34,7 +34,7 @@ public class GameView extends View {
     private int viewHeight;
     Handler handler;
     Runnable runnable;
-    final int update_ms = 25;
+    final int updateMs = 25;
     Display display;
     Point point;
     int dWidth,dHeight,birdFrame;
@@ -115,6 +115,7 @@ public class GameView extends View {
         else {
             birdFrame = 0;
         }
+        canvas.drawBitmap(bird[birdFrame],null,rect2,null);
         if(gameState) {
             if (birdY < dHeight - bird[0].getHeight() - 40 || velocity < 0) {
                 velocity += gravity;
@@ -145,9 +146,9 @@ public class GameView extends View {
                 }
             }
         }
-        canvas.drawBitmap(bird[birdFrame],null,rect2,null);
+
         canvas.drawText(getResources().getString(R.string.points) + " " + points, 50, 100, p);
-        handler.postDelayed(runnable,update_ms);
+        handler.postDelayed(runnable,updateMs);
 
     }
 

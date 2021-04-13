@@ -26,7 +26,6 @@ public class MainActivity2 extends AppCompatActivity {
             record = query.getInt(0);
         }
         if (record<points){
-            //"UPDATE records SET record = " + points + " WHERE id = 1;"
             ContentValues updateValues = new ContentValues();;
             updateValues.put("record", points);
             db.update("records",updateValues, "_id = 1",null);
