@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FlappyBird</string>
+    <string name="start">ANFANG</string>
+    <string name="points">Ergebnis: </string>
+    <string name="record">AUFZEICHNUNG</string>
+    <string name="score">ERGEBNIS</string>
+    <string name="restart">NEU STARTEN</string>
+</resources>
